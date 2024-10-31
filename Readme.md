@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Risa](https://up.htmlacademy.ru/adaptive-individual/2/user/2447055).
-* Наставник: `Антон Варнавский`.
+* Наставник: [Антон Варнавский](https://htmlacademy.ru/profile/anton_varnauski).
 
 ---
 
