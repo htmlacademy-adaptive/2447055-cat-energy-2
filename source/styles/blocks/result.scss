@@ -1,0 +1,26 @@
+.result {
+  background-color: $bg-secondary-color;
+}
+
+.result__title {
+  @include font("Oswald", 400, 36px, 1.11);
+}
+
+.result__text {
+  @include font("Lato", 400, 14px, 1.29);
+  color: $primary-text-color;
+}
+
+.result__value {
+  @include font("Oswald", 400, 24px, 1);
+}
+
+.result__criteria {
+  @include font("Lato", 400, 12px, 1);
+  color: $primary-text-color;
+}
+
+.result__costs {
+  @include font("Oswald", 400, 14px, 1.43);
+  text-transform: uppercase;
+}

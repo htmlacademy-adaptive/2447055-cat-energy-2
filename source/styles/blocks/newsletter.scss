@@ -1,0 +1,7 @@
+.newsletter__title {
+  @include font("Oswald", 400, 24px, 1);
+}
+
+.newsletter__text {
+  @include font("Oswald", 400, 16px, 1.5);
+}

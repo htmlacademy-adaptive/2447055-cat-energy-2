@@ -1,0 +1,4 @@
+.developer__name {
+  @include font("Lato", 400, 16px, 1.25);
+  color: $primary-text-color;
+}

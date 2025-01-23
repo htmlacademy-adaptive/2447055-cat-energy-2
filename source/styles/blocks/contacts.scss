@@ -1,0 +1,14 @@
+.contacts__location--second {
+  background-color: $bg-primary-color;
+}
+
+.contacts__title {
+  @include font("Oswald", 400, 16px, 1.25);
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.contacts__address {
+  @include font("Lato", 400, 14px, 1.43);
+  color: $primary-text-color;
+}

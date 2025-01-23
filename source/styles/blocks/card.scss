@@ -1,0 +1,19 @@
+.card__title {
+  @include font("Oswald", 400, 16px, 1.25);
+  text-transform: uppercase;
+  color: $secondary-text-color;
+}
+
+.card__title--more {
+  color: #111111;
+}
+
+.card__char {
+  @include font("Lato", 400, 12px, 1.33);
+  color: $primary-text-color;
+}
+
+.card__desc {
+  @include font("Lato", 400, 12px, 1.33);
+  color: $primary-text-color;
+}

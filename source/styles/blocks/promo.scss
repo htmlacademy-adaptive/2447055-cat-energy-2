@@ -1,0 +1,8 @@
+.promo {
+  color: $light-base-color;
+  background-color: $bg-accent-color;
+}
+
+.promo__text {
+  @include font("Lato", 400, 16px, 1.25);
+}
