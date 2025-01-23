@@ -1,0 +1,4 @@
+.catalog__title {
+  @include font("Oswald", 400, 36px, 1);
+  color: $dark-base-color;
+}

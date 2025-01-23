@@ -1,0 +1,16 @@
+.button {
+  @include font("Oswald", 400, 16px, 1.25);
+  padding: 6px 109px;
+  width: 280px;
+  height: 40px;
+  text-transform: uppercase;
+  color: $light-base-color;
+  background-color: $bg-accent-color;
+  border: none;
+}
+
+.button--more {
+  padding: 6px 94px;
+  color: $primary-text-color;
+  background-color: $bg-primary-color;
+}

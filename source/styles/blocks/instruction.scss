@@ -1,0 +1,8 @@
+.instruction__title {
+  @include font("Oswald", 400, 36px, 1.11);
+}
+
+.instruction__item {
+  @include font("Lato", 400, 14px, 1.29);
+  color: $primary-text-color;
+}
