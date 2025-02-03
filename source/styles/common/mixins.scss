@@ -28,3 +28,9 @@
   width: $width;
   height: $height;
 }
+
+@mixin icon($url, $bg-size: 100% 100%) {
+  background-image: $url;
+  background-repeat: no-repeat;
+  background-size: $bg-size;
+}

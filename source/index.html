@@ -16,8 +16,16 @@
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo logo link-reset" href="index.html">
-      <img class="logo__image" src="#" width="33" height="38" alt="Логотип Cat Energy картинкой">
-      <img class="logo__text" src="#" width="101" height="18" alt="Логотип Cat Energy текстом">
+      <picture>
+        <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="images/vector/logo-cat-desktop.svg">
+        <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/vector/logo-cat-tablet.svg">
+        <img class="logo__image" src="images/vector/logo-cat-mobile.svg" width="33" height="38" alt="Логотип Cat Energy картинкой">
+      </picture>
+      <picture>
+        <source media="(min-width: 1440px)" width="118" height="21" type="image/svg+xml" srcset="images/vector/logo-text-tablet.svg">
+        <source media="(min-width: 768px)" width="101" height="18" type="image/svg+xml" srcset="images/vector/logo-text-tablet.svg">
+        <img class="logo__text" src="images/vector/logo-text-mobile.svg" width="101" height="18" alt="Логотип Cat Energy текстом">
+      </picture>
     </a>
     <nav class="main-header__nav main-nav">
       <button class="main-nav__toggle" type="button">
@@ -38,12 +46,12 @@
   </header>
   <main class="main-index">
     <section class="hero">
-      <h1 class="hero__title">Функциональное питание для котов</h1>
+      <h1 class="hero__title">Функциональное<br>питание для котов</h1>
       <p class="hero__slogan">Занялся собой? Займись котом!</p>
       <picture>
-        <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="images/hero-product-desktop@1x.png 1x, images/hero-product-desktop@2x.png 2x">
-        <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/hero-product-tablet@1x.png 1x, images/hero-product-tablet@2x.png 2x">
-        <img class="hero__image-product" src="images/hero-product-mobile@1x.png" srcset="images/hero-product-mobile@2x.png 2x" width="280" height="270" alt="Изображение упаковки продукта">
+        <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="images/hero/hero-product-desktop@1x.png 1x, images/hero/hero-product-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/hero/hero-product-tablet@1x.png 1x, images/hero/hero-product-tablet@2x.png 2x">
+        <img class="hero__image-product" src="images/hero/hero-product-mobile@1x.png" srcset="images/hero/hero-product-mobile@2x.png 2x" width="280" height="270" alt="Изображение упаковки продукта">
       </picture>
       <a class="hero__link link-reset" href="#">Подобрать программу</a>
     </section>
@@ -67,10 +75,10 @@
     <section class="instruction">
       <h2 class="instruction__title">Как это работает</h2>
       <ul class="instruction__list list-reset">
-        <li class="instruction__item">Функциональное питание содержит только полезные питательные вещества.</li>
-        <li class="instruction__item">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-        <li class="instruction__item">Замените один-два приема обычной еды на наше функциональное питание.</li>
-        <li class="instruction__item">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+        <li class="instruction__item instruction__item--leaf">Функциональное питание содержит только полезные питательные вещества.</li>
+        <li class="instruction__item instruction__item--water">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
+        <li class="instruction__item instruction__item--eat">Замените один-два приема обычной еды на наше функциональное питание.</li>
+        <li class="instruction__item instruction__item--time">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
       </ul>
     </section>
     <section class="result">
@@ -95,8 +103,8 @@
       <div class="result__slider slider">
         <div class="slider__fat">
           <picture>
-            <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/slider-cat-before-tablet@1x.png 1x, images/slider-cat-before-tablet@2x.png 2x">
-            <img class="slider__image slider__image--fat-cat" src="images/slider-cat-before-mobile@1x.png" srcset="images/slider-cat-before-mobile@2x.png 2x" width="280" height="256" alt="Кот до приема Cat Energy">
+            <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/slider/slider-cat-before-tablet@1x.png 1x, images/slider/slider-cat-before-tablet@2x.png 2x">
+            <img class="slider__image slider__image--fat-cat" src="images/slider/slider-cat-before-mobile@1x.png" srcset="images/slider/slider-cat-before-mobile@2x.png 2x" width="280" height="256" alt="Кот до приема Cat Energy">
           </picture>
         </div>
         <button class="slider__toggle" type="button">
@@ -104,8 +112,8 @@
         </button>
         <div class="slider__slim">
           <picture>
-            <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/slider-cat-after-tablet@1x.png 1x, images/slider-cat-after-tablet@2x.png 2x">
-            <img class="slider__image slider__image--slim-cat" src="images/slider-cat-after-mobile@1x.png" srcset="images/slider-cat-after-mobile@2x.png 2x" width="280" height="256" alt="Кот после приема Cat Energy">
+            <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/slider/slider-cat-after-tablet@1x.png 1x, images/slider/slider-cat-after-tablet@2x.png 2x">
+            <img class="slider__image slider__image--slim-cat" src="images/slider/slider-cat-after-mobile@1x.png" srcset="images/slider/slider-cat-after-mobile@2x.png 2x" width="280" height="256" alt="Кот после приема Cat Energy">
           </picture>
         </div>
       </div>
@@ -116,36 +124,36 @@
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
       <picture>
-        <source media="(min-width: 1440px)" width="1440" height="400" type="image/jpeg" srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)" width="768" height="400" type="image/jpeg" srcset="images/location-tablet@1x.jpg 1x, images/location-tablet@2x.jpg 2x">
-        <img class="contacts__map" width="320" height="362" src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" alt="Расположение компании на карте">
+        <source media="(min-width: 1440px)" width="1440" height="400" type="image/png" srcset="images/map/location-desktop@1x.png 1x, images/map/location-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" width="768" height="400" type="image/png" srcset="images/map/location-tablet@1x.png 1x, images/map/location-tablet@2x.png 2x">
+        <img class="contacts__map" width="320" height="362" src="images/map/location-mobile@1x.png" srcset="images/map/location-mobile@2x.png 2x" alt="Расположение компании на карте">
       </picture>
     </section>
   </main>
   <footer class="main-footer">
     <a class="main-footer__logo logo link-reset" href="index.html">
-      <img class="logo__text" src="#" width="128" height="24" alt="Логотип Cat Energy">
+      <img class="logo__text" src="images/vector/footer-logo-text.svg" width="128" height="24" alt="Логотип Cat Energy">
     </a>
     <ul class="main-footer__list social list-reset">
       <li class="social__item">
-        <a class="social__link link-reset" href="https://vk.com/htmlacademy">
+        <a class="social__link social__link--vkontakte link-reset" href="https://vk.com/htmlacademy">
           <span class="visually-hidden">Vkontakte</span>
         </a>
       </li>
       <li class="social__item">
-        <a class="social__link link-reset" href="https://www.youtube.com/user/htmlacademyru">
+        <a class="social__link social__link--youtube link-reset" href="https://www.youtube.com/user/htmlacademyru">
           <span class="visually-hidden">Youtube</span>
         </a>
       </li>
       <li class="social__item">
-        <a class="social__link link-reset" href="https://t.me/htmlacademy">
+        <a class="social__link social__link--telegram link-reset" href="https://t.me/htmlacademy">
           <span class="visually-hidden">Telegram</span>
         </a>
       </li>
     </ul>
     <a class="main-footer__developer developer link-reset" href="https://htmlacademy.ru/intensive/adaptive">
       <span class="developer__name">HTML Academy</span>
-      <img class="developer__logo" src="#" width="27" height="34" alt="Логотип HTML Academy">
+      <img class="developer__logo" src="images/vector/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
     </a>
   </footer>
 </body>

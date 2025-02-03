@@ -1,5 +1,5 @@
 .main-nav__link {
-  @include font("Oswald", 400, 20px, 1);
+  @include font($secondary-font, 400, 20px, 1);
   color: $dark-base-color;
   text-transform: uppercase;
 }

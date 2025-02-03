@@ -1,8 +1,30 @@
 .instruction__title {
-  @include font("Oswald", 400, 36px, 1.11);
+  @include font($secondary-font, 400, 36px, 1.11);
 }
 
 .instruction__item {
-  @include font("Lato", 400, 14px, 1.29);
+  @include font($primary-font, 400, 14px, 1.29);
   color: $primary-text-color;
+}
+
+.instruction__item::before {
+  @include pseudo(60px, 60px);
+  background-color: $bg-accent-color;
+  background-position: 50%;
+}
+
+.instruction__item--leaf::before {
+  @include icon(url("../../icons/stack.svg#icon-leaf"), 30px 32px);
+}
+
+.instruction__item--water::before {
+  @include icon(url("../../icons/stack.svg#icon-water"), 30px 32px);
+}
+
+.instruction__item--eat::before {
+  @include icon(url("../../icons/stack.svg#icon-eat"), 30px 32px);
+}
+
+.instruction__item--time::before {
+  @include icon(url("../../icons/stack.svg#icon-time"), 30px 32px);
 }

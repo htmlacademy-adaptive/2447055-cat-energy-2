@@ -1,5 +1,5 @@
 .button {
-  @include font("Oswald", 400, 16px, 1.25);
+  @include font($secondary-font, 400, 16px, 1.25);
   padding: 6px 109px;
   width: 280px;
   height: 40px;
