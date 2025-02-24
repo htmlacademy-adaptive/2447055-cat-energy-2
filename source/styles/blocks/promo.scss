@@ -1,35 +1,90 @@
 .promo {
   width: 280px;
-  height: 290px;
+  min-height: 290px;
   color: $light-base-color;
-  background-color: $bg-accent-color;
-  background-image: url("../../images/promo/promo-cat-mobile@1x.png");
-  background-blend-mode: soft-light;
+  background-image:
+    image-set(
+      url("../../images/promo/promo-cat-mobile@1x.webp") type("image/webp") 1x,
+      url("../../images/promo/promo-cat-mobile@2x.webp") type("image/webp") 2x,
+      url("../../images/promo/promo-cat-mobile@1x.png") type("image/png") 1x,
+      url("../../images/promo/promo-cat-mobile@2x.png") type("image/png") 2x
+    );
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+
+  @media (min-width: 768px) {
+    background-image:
+      image-set(
+        url("../../images/promo/promo-cat-tablet@1x.webp") type("image/webp") 1x,
+        url("../../images/promo/promo-cat-tablet@2x.webp") type("image/webp") 2x,
+        url("../../images/promo/promo-cat-tablet@1x.png") type("image/png") 1x,
+        url("../../images/promo/promo-cat-tablet@2x.png") type("image/png") 2x
+      );
+    width: 707px;
+    min-height: 200px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  @media (min-width: 1440px) {
+    background-image:
+      image-set(
+        url("../../images/promo/promo-cat-desktop@1x.webp") type("image/webp") 1x,
+        url("../../images/promo/promo-cat-desktop@2x.webp") type("image/webp") 2x,
+        url("../../images/promo/promo-cat-desktop@1x.png") type("image/png") 1x,
+        url("../../images/promo/promo-cat-desktop@2x.png") type("image/png") 2x
+      );
+    width: 245px;
+    min-height: 288px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.promo::before {
+  @include pseudo(78px, 80px);
+  background-color: $light-base-color;
+  mask-image: url("../../icons/stack.svg#icon-gift");
+  margin-top: 59px;
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    margin: 0;
+    margin-left: 78px;
+  }
+}
+
+.promo::after {
+  @include pseudo(280px, 100%);
+  background-color: rgba($bg-accent-color, 0.85);
+  position: absolute;
+  z-index: -1;
+
+  @media (min-width: 768px) {
+    width: 707px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 245px;
+  }
 }
 
 .promo__text {
   @include font($primary-font, 400, 16px, 1.25);
   width: 161px;
   text-align: center;
-  position: relative;
-}
+  margin-top: auto;
+  margin-bottom: 43px;
 
-.promo__text::before {
-  @include pseudo(78px, 80px);
-  background-color: $light-base-color;
-  mask-image: url("../../icons/stack.svg#icon-gift");
-  position: absolute;
+  @media (min-width: 768px) and (max-width: 1439px) {
+    margin: 0;
+    margin-right: 125px;
+    text-align: left;
+  }
 }
-
-/*
-overlay. Режим перекрытия, при котором используется комбинация режимов наложения screen для более светлых пикселей и multiply для тёмных.
-soft-light. Режим мягкого света, который придаёт более натуральный эффект, напоминающий сияние рассеянного светового пятна на фоне.
-hard-light. Режим жёсткого света, при котором цвета умножаются или осветляются, в зависимости от источника цвета.
-darken. Режим затемнения, при котором если пиксели верхнего слоя темнее, чем на нижележащих слоях, они сохраняются в изображении.
-difference. Режим сравнения, при котором тёмный цвет вычитается из самого светлого, часто изображение будет иметь очень высокий контраст.
-exclusion. Режим исключения, который сравнивает пиксел активного слоя и эквивалентный пиксел нижележащего слоя с учётом их яркости.
-hue. Режим цветового тона, который сохраняет оттенок активного слоя и добавляет ему яркость и насыщенность нижележащих слоёв.
-saturation. Режим насыщенности, который создаёт цвет с насыщенностью исходного цвета и оттенком и яркостью нижележащего цветового фона.
-color. Режим цветности, который создаёт цвет с оттенком и насыщенностью исходного цвета и яркость нижележащего цветового фона.
-luminosity. Режим яркости, который создаёт цвет с яркостью исходного цвета и оттенком и насыщенностью нижележащего цветового фона.
-*/

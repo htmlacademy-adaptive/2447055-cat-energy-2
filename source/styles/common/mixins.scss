@@ -15,13 +15,6 @@
   line-height: $line;
 }
 
-@mixin flex($direction: row, $justify: space-between, $align: center) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-}
-
 @mixin pseudo($width, $height) {
   content: "";
   display: block;
