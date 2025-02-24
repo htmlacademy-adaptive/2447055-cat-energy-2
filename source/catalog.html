@@ -10,11 +10,13 @@
   <link rel="apple-touch-icon" href="favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header" data-test="header">
     <a class="main-header__logo logo link-reset" href="index.html">
       <picture>
         <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="images/vector/logo-cat-desktop.svg">
@@ -46,7 +48,7 @@
   </header>
   <main class="main-index">
     <h1 class="main-index__title title-reset">Каталог продукции</h1>
-    <section class="catalog">
+    <section class="catalog" data-test="catalog">
       <h2 class="visually-hidden">Основные товары для питания</h2>
       <article class="catalog__card card">
         <a class="card__link-img link-reset" href="#">
@@ -263,7 +265,7 @@
         <button class="card__button button button--more" type="button">Показать все</button>
       </article>
     </section>
-    <section class="extra-product">
+    <section class="extra-product" data-test="additional">
       <h2 class="extra-product__title title-reset">Дополнительные товары</h2>
       <ul class="extra-product__list list-reset">
         <li class="extra-product__card">
@@ -306,7 +308,7 @@
         <button class="newsletter__button button button--news" type="submit">Подписаться</button>
       </form>
     </section>
-    <section class="contacts contacts--second">
+    <section class="contacts contacts--second" data-test="contacts">
       <div class="contacts__location">
         <h2 class="contacts__title title-reset">Приглашаем<br> к сотрудничеству дилеров!</h2>
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8
@@ -327,7 +329,7 @@
       </noscript>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer" data-test="footer">
     <div class="main-footer__wrapper">
       <a class="main-footer__logo logo link-reset" href="index.html">
         <img class="logo__text" src="images/vector/footer-logo-text.svg" width="128" height="24" alt="Логотип Cat Energy">
