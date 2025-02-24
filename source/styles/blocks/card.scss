@@ -1,0 +1,238 @@
+.card {
+  padding: 23px 20px;
+  display: grid;
+  position: relative;
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 140px);
+    grid-template-areas: "img title" "img desc" "button button";
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 250px;
+    justify-items: center;
+    padding: 10px 37px 40px;
+    background-image: linear-gradient(180deg, transparent 80px, $bg-primary-color 80px);
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: 1440px) {
+    background-image: linear-gradient(180deg, transparent 70px, $bg-primary-color 70px);
+    padding: 0 38px 40px;
+    grid-template-columns: 169px;
+    margin-bottom: 75px;
+  }
+}
+
+.card::before {
+  @media (max-width: 767px) {
+    @include pseudo(767px, 1px);
+    background-color: #ebebeb;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.card--more {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 25px;
+
+  @media (min-width: 768px) {
+    background-image: none;
+    background-color: $light-base-color;
+    width: 324px;
+    min-height: 427px;
+    margin-top: 83px;
+    margin-bottom: 61px;
+    padding-top: 158px;
+    outline: solid 1px $bg-primary-color;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 150px;
+    width: 245px;
+    min-height: 423px;
+    margin-bottom: 77px;
+    margin-top: 71px;
+  }
+}
+
+.card--more::after {
+  @include pseudo(30px, 30px);
+  background-color: #d3d3d3;
+  mask-image: url("../../icons/stack.svg#plus-mobile");
+  position: absolute;
+  top: 27px;
+
+  @media (min-width: 768px) {
+    width: 60px;
+    height: 60px;
+    mask-image: url("../../icons/stack.svg#plus-tablet");
+    top: 48px;
+  }
+}
+
+.card__link-img {
+  place-self: center center;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    grid-area: img;
+  }
+
+  @media (min-width: 768px) {
+    height: 210px;
+    object-fit: none;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 13px;
+  }
+}
+
+.card__link-img:hover,
+.card__link-img:focus {
+  opacity: 0.8;
+  outline: none;
+}
+
+.card__link-img:active {
+  opacity: 0.6;
+}
+
+.card__link-title:hover,
+.card__link-title:focus {
+  opacity: 0.8;
+  outline: none;
+}
+
+.card__link-title:active {
+  opacity: 0.6;
+}
+
+.card__link-title {
+  @media (max-width: 767px) {
+    grid-area: title;
+  }
+}
+
+.card__title {
+  @include font($secondary-font, 400, 16px, 1.25);
+  @include font($secondary-font, 400, 16px, 1.25);
+  text-transform: uppercase;
+  color: $secondary-text-color;
+  width: 80px;
+  margin-bottom: 14px;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    width: 135px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 23px;
+  }
+}
+
+.card__title--more {
+  width: 219px;
+  color: #111111;
+  margin-bottom: 8px;
+
+  @media (min-width: 768px) {
+    width: 150px;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 23px;
+  }
+}
+
+.card__desc {
+  @include font($primary-font, 400, 12px, 1.33);
+  @include font($primary-font, 400, 12px, 1.33);
+  color: $primary-text-color;
+  justify-self: stretch;
+  margin-bottom: 21px;
+
+  @media (max-width: 767px) {
+    grid-area: desc;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 32px;
+  }
+}
+
+.card__desc--more {
+  margin: 0;
+  margin-bottom: 21px;
+
+  @media (min-width: 768px) {
+    width: 170px;
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 88px;
+  }
+}
+
+.card__char {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    border-bottom: solid 1px #cdcdcd;
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-bottom: 7px;
+  }
+}
+
+.card__char:not(:last-child) {
+  @media (min-width: 768px) {
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 5px;
+  }
+}
+
+.card__button {
+  cursor: pointer;
+
+  @media (max-width: 767px) {
+    grid-area: button;
+  }
+}
+
+.card__button:hover,
+.card__button:focus {
+  background-color: #5eaa2f;
+  outline: none;
+}
+
+.card__button:active {
+  color: rgba($light-base-color, 0.3);
+}

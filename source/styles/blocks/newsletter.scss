@@ -1,0 +1,111 @@
+.newsletter {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @media (min-width: 768px) {
+    width: 768px;
+    padding: 0 70px 80px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1440px;
+    padding: 0 110px 104px;
+  }
+}
+
+.newsletter::before {
+  @include pseudo(100vw, 2px);
+  background-color: $bg-accent-color;
+  position: absolute;
+  top: 10px;
+  right: 50%;
+  transform: translateX(50%);
+
+  @media (min-width: 768px) {
+    top: 13px;
+  }
+
+  @media (min-width: 1440px) {
+    top: 18px;
+  }
+}
+
+.newsletter__title {
+  @include font($secondary-font, 400, 24px, 1);
+  align-self: flex-start;
+  background-color: $light-base-color;
+  position: relative;
+  padding: 0 40px;
+  transform: translateX(-40px);
+  margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 40px;
+    margin-bottom: 73px;
+  }
+}
+
+.newsletter__text {
+  @include font($secondary-font, 400, 16px, 1.5);
+  text-align: center;
+  margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    line-height: 1.33;
+    margin: 0;
+    margin-bottom: 23px;
+  }
+}
+
+.newsletter__field {
+  @include font($secondary-font, 400, 20px, 1);
+  width: 280px;
+  padding: 12px;
+  color: $primary-text-color;
+  margin-bottom: 16px;
+  border: solid 1px #cdcdcd;
+
+  @media (min-width: 768px) {
+    width: 374px;
+    padding: 12px;
+    margin-left: -2px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 1440px) {
+    width: 496px;
+  }
+}
+
+.newsletter__field::placeholder {
+  color: $primary-text-color;
+  text-transform: uppercase;
+}
+
+.newsletter__field:hover,
+.newsletter__field:focus {
+  border-color: $primary-text-color;
+  outline: none;
+}
+
+.newsletter__field:user-invalid {
+  border-color: #ff8282;
+}
+
+.newsletter__field:disabled {
+  border-color: #cdcdcd;
+  background-color: #f2f2f2;
+  opacity: 0.4;
+  pointer-events: none;
+}

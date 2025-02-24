@@ -1,0 +1,125 @@
+.main-header {
+  width: 320px;
+  padding: 13px 20px 14px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    width: 768px;
+    display: flex;
+    flex-direction: row;
+    padding: 19px 29px 0;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1440px;
+    padding: 53px 106px 0;
+    z-index: 2;
+  }
+}
+
+.main-header--index {
+  @media (min-width: 1440px) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $light-base-color;
+  }
+}
+
+.main-header--index .main-nav__item--current::after {
+  @media (min-width: 1440px) {
+    background-color: $light-base-color;
+  }
+}
+
+
+.main-header:not(.main-header--index) .logo__text {
+  @media (max-width: 767px) {
+    margin-top: 5px;
+  }
+}
+
+.main-header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 190px;
+  align-self: flex-start;
+
+  @media (min-width: 768px) {
+    width: 175px;
+    padding-top: 6px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 205px;
+    margin-top: -4px;
+    margin-left: 1px;
+  }
+}
+
+.main-header__logo:hover,
+.main-header__logo:focus {
+  opacity: 0.8;
+  outline: none;
+}
+
+.main-header__logo:active {
+  opacity: 0.6;
+}
+
+.main-header__toggle {
+  width: 24px;
+  height: 24px;
+  border: none;
+  position: relative;
+  background: transparent;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.main-header__toggle--nojs {
+  display: none;
+}
+
+.main-header__toggle--close::before {
+  @include pseudo(24px, 2px);
+  background-color: $dark-base-color;
+  position: absolute;
+  top: 2px;
+  left: -1;
+  box-shadow: 0 8px 0 0 $dark-base-color;
+}
+
+.main-header__toggle--close::after {
+  @include pseudo(24px, 2px);
+  background-color: $dark-base-color;
+  position: absolute;
+  bottom: 4px;
+  left: -1;
+}
+
+.main-header__toggle--open::before {
+  @include pseudo(24.76px, 1.5px);
+  background-color: $dark-base-color;
+  position: absolute;
+  top: 11px;
+  left: 2px;
+  transform: rotate(-46.64deg);
+}
+
+.main-header__toggle--open::after {
+  @include pseudo(24.76px, 1.5px);
+  background-color: $dark-base-color;
+  position: absolute;
+  top: 11px;
+  left: 3px;
+  transform: rotate(46.64deg);
+}

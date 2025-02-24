@@ -1,0 +1,92 @@
+.slider {
+  position: relative;
+
+  @media (min-width: 1440px) {
+    align-self: center;
+    margin-bottom: 20px;
+  }
+}
+
+.slider__toggle {
+  width: 4px;
+  height: inherit;
+  padding: 0;
+  background-color: #666666;
+  border: none;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 138px;
+  z-index: 1;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    left: 278px;
+  }
+}
+
+.slider__toggle:hover,
+.slider__toggle:focus {
+  background-color: $bg-accent-color;
+  outline: none;
+}
+
+.slider__toggle:hover.slider__toggle::before,
+.slider__toggle:focus.slider__toggle::before {
+  border-color: $bg-accent-color;
+}
+
+.slider__toggle:hover.slider__toggle::after,
+.slider__toggle:focus.slider__toggle::after {
+  background-color: $bg-accent-color;
+}
+
+.slider__toggle:active {
+  opacity: 0.6;
+}
+
+.slider__toggle::before {
+  @include pseudo(40px, 40px);
+  border: solid 2px #666666;
+  border-radius: 50%;
+  background-color: $light-base-color;
+  position: absolute;
+  top: 108px;
+  left: -18px;
+
+  @media (min-width: 768px) {
+    top: 236px;
+  }
+}
+
+.slider__toggle::after {
+  @include pseudo(24px, 18px);
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#toggle");
+  position: absolute;
+  top: 119px;
+  left: -10px;
+
+  @media (min-width: 768px) {
+    top: 247px;
+  }
+}
+
+.slider__fat {
+  overflow-x: hidden;
+  width: 50%;
+}
+
+.slider__slim {
+  overflow-x: hidden;
+  width: 50%;
+  transform: translate(100%, -100%);
+
+  @media (min-width: 768px) {
+    transform: translate(100%, -100%);
+  }
+}
+
+.slider__image--slim-cat {
+  transform: translateX(-50%);
+}

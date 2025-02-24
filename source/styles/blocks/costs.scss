@@ -1,0 +1,11 @@
+.costs__criteria {
+  @media (min-width: 768px) {
+    display: block;
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: 1440px) {
+    display: inline-block;
+    margin-right: 63px;
+  }
+}

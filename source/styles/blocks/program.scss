@@ -1,0 +1,246 @@
+@keyframes arrow {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(3px);
+  }
+}
+
+.program {
+  width: 320px;
+  padding: 20px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 768px;
+    padding: 0 30px;
+    margin-top: -86px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1440px;
+    padding: 82px 110px 41px;
+  }
+}
+
+.program__list {
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    column-gap: 80px;
+  }
+}
+
+.program__item {
+  background-color: $bg-primary-color;
+  position: relative;
+  padding: 30px 20px 22px;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    padding: 77px 316px 62px 52px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 77px 61px 64px 52px;
+  }
+}
+
+.program__item:last-child {
+  @media (max-width: 1439px) {
+    margin-bottom: 0;
+  }
+}
+
+.program__item::before {
+  @include pseudo(50px, 50px);
+  border-radius: 50%;
+  background-color: $bg-accent-color;
+  position: absolute;
+  top: 24px;
+
+  @media (min-width: 768px) {
+    width: 200px;
+    height: 200px;
+    top: 92px;
+    right: 63px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 100px;
+    height: 100px;
+    top: 47px;
+    left: 52px;
+  }
+}
+
+.program__item--slim::after {
+  @include pseudo(36px, 50px);
+  @include icon(url("../../icons/stack.svg#black-cat-slim"), 36px 50px);
+  position: absolute;
+  top: 21px;
+  left: 27px;
+
+  @media (min-width: 768px) {
+    width: 140px;
+    height: 194px;
+    background-size: 140px 194px;
+    top: 81px;
+    left: 475px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 70px;
+    height: 97px;
+    background-size: 70px 97px;
+    top: 41px;
+    left: 67px;
+  }
+}
+
+.program__item--pro::after {
+  @include pseudo(68px, 31px);
+  @include icon(url("../../icons/stack.svg#black-cat-pro"), 68px 31px);
+  position: absolute;
+  top: 34px;
+  left: 12px;
+
+  @media (min-width: 768px) {
+    width: 272px;
+    height: 118px;
+    background-size: 272px 118px;
+    top: 134px;
+    left: 411px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 136px;
+    height: 58px;
+    background-size: 136px 58px;
+    top: 67px;
+    left: 33px;
+  }
+}
+
+.program__title {
+  @include font($secondary-font, 400, 24px, 1.54);
+  @include font($secondary-font, 400, 24px, 1.54);
+  text-transform: uppercase;
+  margin-bottom: 29px;
+  display: block;
+  margin-left: 70px;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 1;
+    margin-left: 0;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 162px;
+    margin-bottom: 73px;
+  }
+}
+
+.program__description {
+  @include font($primary-font, 400, 14px, 1.29);
+  @include font($primary-font, 400, 14px, 1.29);
+  color: $primary-text-color;
+  margin-bottom: 23px;
+
+  @media (min-width: 768px) {
+    color: $dark-base-color;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 32px;
+  }
+}
+
+.program__link {
+  @include font($secondary-font, 400, 16px, 1);
+  @include font($secondary-font, 400, 16px, 1);
+  text-transform: uppercase;
+  color: $dark-base-color;
+  position: relative;
+  display: block;
+  padding-right: 100px;
+
+  @media (max-width: 767px) {
+    border-top: solid 1px #d9d9d9;
+    padding-top: 18px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    padding-right: 200px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-right: 300px;
+  }
+}
+
+.program__link:hover.program__link::after,
+.program__link:focus.program__link::after {
+  animation: arrow 0.6s infinite;
+}
+
+.program__link:focus {
+  opacity: 0.6;
+  outline: none;
+}
+
+.program__link:active {
+  opacity: 0.3;
+}
+
+.program__link::before {
+  @include pseudo(10px, 2px);
+  background-color: $dark-base-color;
+  position: absolute;
+  top: 25px;
+  left: 101px;
+
+  @media (min-width: 768px) {
+    top: 9px;
+    left: 133px;
+  }
+}
+
+.program__link::after {
+  @include pseudo(32px, 10px);
+  background-image: url("../../icons/stack.svg#icon-arrow");
+  position: absolute;
+  top: 21px;
+  left: 102px;
+
+  @media (min-width: 768px) {
+    top: 5px;
+    left: 134px;
+  }
+}
+
+.program__item--pro .program__link::before {
+  left: 98px;
+
+  @media (min-width: 768px) {
+    left: 129px;
+  }
+}
+
+.program__item--pro .program__link::after {
+  left: 99px;
+
+  @media (min-width: 768px) {
+    left: 130px;
+  }
+}

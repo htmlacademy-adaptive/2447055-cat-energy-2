@@ -1,0 +1,54 @@
+.button {
+  @include font($secondary-font, 400, 16px, 1.25);
+  width: 100%;
+  padding: 10px;
+  min-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $light-base-color;
+  background-color: $bg-accent-color;
+  border: none;
+}
+
+.button--more {
+  color: $primary-text-color;
+  background-color: $bg-primary-color;
+}
+
+.button--more:hover,
+.button--more:focus {
+  background-color: #ebebeb;
+  outline: none;
+}
+
+.button--more:active {
+  color: $primary-text-color;
+}
+
+.button--news {
+  width: 280px;
+  padding: 15px;
+  line-height: 1.3;
+  font-size: 20px;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    width: 255px;
+    margin-left: -4px;
+  }
+}
+
+.button--news:hover,
+.button--news:focus {
+  background-color: #5eaa2f;
+  outline: none;
+}
+
+.button--news:active {
+  color: rgba($light-base-color, 0.3);
+}
+
+.button--news:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
