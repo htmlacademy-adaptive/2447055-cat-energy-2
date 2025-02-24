@@ -31,6 +31,13 @@
   }
 }
 
+.main-header--index .main-nav__item--current::after {
+  @media (min-width: 1440px) {
+    background-color: $light-base-color;
+  }
+}
+
+
 .main-header:not(.main-header--index) .logo__text {
   @media (max-width: 767px) {
     margin-top: 5px;

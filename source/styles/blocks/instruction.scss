@@ -122,3 +122,9 @@
 .instruction__item--time::before {
   @include icon(url("../../icons/stack.svg#icon-time"), 27px 31px);
 }
+
+.instruction__item--time br {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}

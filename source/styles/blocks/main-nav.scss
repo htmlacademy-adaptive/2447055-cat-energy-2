@@ -1,6 +1,5 @@
 .main-nav {
   @media (max-width: 767px) {
-    transform: translate(-29%);
     background-color: $light-base-color;
     z-index: 1;
   }
@@ -17,6 +16,7 @@
 .main-nav--open {
   @media (max-width: 767px) {
     position: absolute;
+    right: 0;
     top: 100%;
     left: 0;
   }
@@ -29,7 +29,7 @@
 }
 
 .main-nav__list {
-  width: 767px;
+  width: 100%;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -101,11 +101,5 @@
     @include pseudo(auto, 2px);
     background-color: $bg-accent-color;
     transform: translateY(7px);
-  }
-}
-
-.main-header--index .main-nav__item--current::after {
-  @media (min-width: 1440px) {
-    background-color: $light-base-color;
   }
 }
